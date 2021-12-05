@@ -1,11 +1,11 @@
 
 <?php
-include_once("header.php");
+include_once("hea.php");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login Page</title>
+	<title>Login</title>
    <!--Made with love by Mutiullah Samim -->
    
 	<!--Bootsrap 4 CDN-->
