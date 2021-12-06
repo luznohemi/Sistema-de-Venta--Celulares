@@ -1,11 +1,20 @@
 <?php
 include_once("conexion.php");
-//NUEV USUARIO 
-function nuevoUsuario(){
 
-    
+   //registrar usuario
+   $pdo;
 
-}
+   function addUser($dni,$nombres,$correo,$celular,$pw,$tipoUsuario,$direccion){
+       global $pdo;
+       try {
+           $agreagar=$pdo->prepare("INSERT INTO user(Dni,Nombres,Correo,Celular,Pw,TipoUsuario,Direccion) VALUES(?,?,?,?,?,?,?)");
+           $agreagar->execute([$dni,$nombres,$correo,$celular,$pw,$tipoUsuario,$direccion]);  
+           echo "REGISTRO EXITOSO";
+       } catch (Exception $ex) {
+           die("Error").$ex->getMessage();
+       }
+   }
+
 //obtener id de usuario logeando
 function obtenerID(){
     global $pdo;
