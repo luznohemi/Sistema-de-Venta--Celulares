@@ -25,8 +25,8 @@ function obtenerID(){
     $resultado->setFetchMode(PDO::FETCH_ASSOC);
     while ($row=$resultado->fetch()) {
         return $row['idUsuario'];
-        # code...
     }
 }
+
 
 ?>
