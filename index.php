@@ -6,7 +6,6 @@ include_once("include/header.php");
 <html>
 <head>
 	<title>Login</title>
-  
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
@@ -18,13 +17,13 @@ include_once("include/header.php");
 				<h7>BIENVENIDO A NUESTRO SISTEMA </h7>
 			</div>
 			<div class="card-body">
-				<form>
-
+				
+			<form action="#" method="POST">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="nombre de usuario">
+						<input type="text" class="form-control" placeholder="nombre de usuario" name="usuario">
 						
 					</div>
 
@@ -32,11 +31,11 @@ include_once("include/header.php");
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="contraseña">
+						<input type="password" class="form-control" placeholder="contraseña" name="pw">
 					</div>
 					
 					<div class="form-group">
-						<input type="submit" value="iniciar" class="btn float-right login_btn">
+						<input type="submit" value="iniciar" class="btn float-right login_btn" name="enviar">
 					</div>
 				</form>
 			</div>
@@ -49,6 +48,15 @@ include_once("include/header.php");
 					<a class="text-white" href="view/cliente/registrar.php">REGISTRATE</a>
 				</div>
 			</div>
+
+			<?php
+				if(isset($_REQUEST['enviar'])){
+					$user=$_REQUEST['usuario'];
+					$pw=$_REQUEST['pw'];
+
+					login($user,$pw);
+				}
+			?>
 		</div>
 	</div>
 </div>

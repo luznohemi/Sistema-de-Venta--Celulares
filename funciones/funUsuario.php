@@ -46,10 +46,11 @@ function login($user,$pw){
     if(isset($usuario)&&($contra)){
         if($tipo=='admin'){
             $_SESSION['usuario']=$usuario;
-            header("location:../view/administrador");  
+            header("location:view/administrador");  
         }
         if($tipo==="cliente"){
-            echo "cliente";
+            $_SESSION['usuario']=$usuario;
+            header("location:../view/cliente");
         }
            
     }else{
