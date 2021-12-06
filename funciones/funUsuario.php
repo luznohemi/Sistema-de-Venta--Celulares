@@ -19,5 +19,34 @@ function obtenerID(){
     }
 }
 
+function login($user,$pw){
+    global $pdo;
+    $query="SELECT*FROM usuario WHERE Correo=? AND Pw=?";
+    $resultado=$pdo->prepare($query);
+    $resultado->execute([$user,$pw]);
+    $resultado->setFetchMode(PDO::FETCH_ASSOC);
+
+    while ($row=$resultado->fetch()) {
+        $usuario=$row['Correo'];
+        $contra=$row['Pw'];
+        $id=$row['IdUsuario'];
+        $tipo=$row['TipoUsuario'];
+    }
+
+
+    if(isset($usuario)&&($contra)){
+        if($tipo=='admin'){
+            $_SESSION['usuario']=$usuario;
+            header("location:../view/administrador");  
+        }
+        if($tipo==="cliente"){
+            echo "cliente";
+        }
+           
+    }else{
+        echo "EL USUARIO NO EXISTE";
+    }    
+}
+
 
 ?>
