@@ -19,13 +19,13 @@ include_once("../../include/header.php");
 				<h7>REGISTRO DE CLIENTE</h7>
 			</div>
 			<div class="card-body">
-				<form>
+				<form action="registrar.php" method="POST">
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="DNI">
+						<input type="text" name="dni" class="form-control" placeholder="DNI">
 						
 					</div>
 
@@ -33,7 +33,7 @@ include_once("../../include/header.php");
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="Nombres">
+						<input type="text" name="nombres" class="form-control" placeholder="Nombres">
 						
 					</div>
 
@@ -41,7 +41,7 @@ include_once("../../include/header.php");
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="email" class="form-control" placeholder="Correo">
+						<input type="email" name="correo" class="form-control" placeholder="Correo">
 						
 					</div>
 
@@ -49,39 +49,53 @@ include_once("../../include/header.php");
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="number" class="form-control" placeholder="Celular">
+						<input type="number" name="celular"  class="form-control" placeholder="Celular">
 					</div>
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="contraseña">
+						<input type="password" name="pw"class="form-control" placeholder="Contraseña">
 					</div>
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="direccion">
+						<input type="text" name="direccion" class="form-control" placeholder="Direccion">
 					</div>
 					
 					<div class="form-group">
-						<input type="submit" value="iniciar" class="btn float-right login_btn">
+						<input type="submit" name="registrar" value="iniciar" class="btn float-right login_btn">
 					</div>
-				</form>
-			</div>
+			    </div>
 
-			<div class="card-footer">
-				<div class="d-flex justify-content-center links">
+			    <div class="card-footer">
+				 <div class="d-flex justify-content-center links">
 					¿si no tienes cuenta ?
 				</div>
 				<div class="d-flex justify-content-center ">
-					<a class="text-white" href="#">INICIAR SESION</a>
+					<a class="text-white" href="index.php">INICIAR SESION</a>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	</form>
 </div>
+<?php
+if(isset($_POST['registrar'])){
+	$dni=$_POST['dni'];
+	$nombres=$_POST['nombres'];
+	$correo=$_POST['correo'];
+	$celular=$_POST['celular'];
+	$pw=$_POST['pw'];
+	$direccion=$_POST['direccion'];
+	
+
+}
+
+?>
 </body>
 </html>
