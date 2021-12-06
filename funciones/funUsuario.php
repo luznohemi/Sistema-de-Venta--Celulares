@@ -4,11 +4,11 @@ include_once("conexion.php");
    //registrar usuario
    $pdo;
 
-   function addUser($dni,$nombres,$correo,$celular,$pw,$direccion){
+   function addUser($dni,$nombres,$correo,$celular,$pw,$tipoUsuario,$direccion){
        global $pdo;
        try {
-           $agregar=$pdo->prepare("INSERT INTO usuario(Dni,Nombres,Correo,Celular,Pw,Direccion) VALUES(?,?,?,?,?,?)");
-           $agregar->execute([$dni,$nombres,$correo,$celular,$pw,$direccion]);  
+           $agregar=$pdo->prepare("INSERT INTO usuario(Dni,Nombres,Correo,Celular,Pw,TipoUsuario,Direccion) VALUES(?,?,?,?,?,?,?)");
+           $agregar->execute([$dni,$nombres,$correo,$celular,$pw,$tipoUsuario,$direccion]);  
            echo "REGISTRO EXITOSO";
        } catch (Exception $ex) {
            die("Error").$ex->getMessage();
@@ -16,20 +16,10 @@ include_once("conexion.php");
 
 
    }
-   addUser('232','luz','12s@gamil','121322','123','san sebas');
+   addUser('232','luz','12s@gamil','121322','123','cliente','san sebas');
   
-//obtener id de usuario logeando
-function obtenerID(){
-    global $pdo;
-    $nuevoUsurio=$_SESSION['usuario'];
-    $query="SELECT * FROM user WHERE  Gmail=?";
-    $resultado=$pdo->prepare($query);
-    $resultado->execute([$nuevoUsurio]);
-    $resultado->setFetchMode(PDO::FETCH_ASSOC);
-    while ($row=$resultado->fetch()) {
-        return $row['idUsuario'];
-    }
-}
+
+
 
 function login($user,$pw){
     global $pdo;
@@ -61,5 +51,18 @@ function login($user,$pw){
     }    
 }
 
+
+
+function obtenerID(){
+    global $pdo;
+    $nuevoUsurio=$_SESSION['usuario'];
+    $query="SELECT * FROM user WHERE  Gmail=?";
+    $resultado=$pdo->prepare($query);
+    $resultado->execute([$nuevoUsurio]);
+    $resultado->setFetchMode(PDO::FETCH_ASSOC);
+    while ($row=$resultado->fetch()) {
+        return $row['idUsuario'];
+    }
+}
 
 ?>
