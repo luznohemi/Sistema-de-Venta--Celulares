@@ -43,7 +43,7 @@ function login($user,$pw){
         }
         if($tipo==="cliente"){
             $_SESSION['usuario']=$usuario;
-            header("location:view/cliente");
+            header("location:index.php");
         }
            
     }else{
