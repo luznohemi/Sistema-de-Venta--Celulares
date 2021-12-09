@@ -1,67 +1,22 @@
 
 <?php
-include_once("../../include/header.php");
+//include_once("../header.php");
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
-	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	
-    <link href="../../include/style/style.css" rel="stylesheet" >
+	<meta charset="utf-8">
+	<title>Menu Dropdown Adaptable</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
 
 </head>
 <body>
-<div class="container">
-	<div class="d-flex justify-content-center h-50">
-		<div class="card">
-			<div class="card-header  text-white" >
-				<h7>BIENVENIDO A NUESTRO SISTEMA </h7>
-			</div>
-			<div class="card-body">
-				
-			<form action="#" method="POST">
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-						<input type="text" class="form-control" placeholder="nombre de usuario" name="usuario">
-						
-					</div>
-
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<input type="password" class="form-control" placeholder="contraseña" name="pw">
-					</div>
-					
-					<div class="form-group">
-						<input type="submit" value="iniciar" class="btn float-right login_btn" name="enviar">
-					</div>
-				</form>
-			</div>
-
-			<div class="card-footer">
-				<div class="d-flex justify-content-center links">
-					¿si no tienes cuenta ?
-				</div>
-				<div class="d-flex justify-content-center ">
-					<a class="text-white" href="registrar.php">REGISTRATE</a>
-				</div>
-			</div>
-
-			<?php
-				if(isset($_REQUEST['enviar'])){
-					$user=$_REQUEST['usuario'];
-					$pw=$_REQUEST['pw'];
-
-					login($user,$pw);
-				}
-			?>
-		</div>
-	</div>
-</div>
+hola son clientre
 </body>
 </html>
