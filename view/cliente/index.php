@@ -48,7 +48,7 @@ include_once("../../include/header.php");
 					¿si no tienes cuenta ?
 				</div>
 				<div class="d-flex justify-content-center ">
-					<a class="text-white" href="view/cliente/registrar.php">REGISTRATE</a>
+					<a class="text-white" href="registrar.php">REGISTRATE</a>
 				</div>
 			</div>
 

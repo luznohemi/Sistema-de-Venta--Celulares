@@ -1,7 +1,7 @@
 
 <?php
 include_once("../../include/header.php");
-include("../../funciones/funUsuario.php");
+
 ?>
 <!DOCTYPE html>
 <html>
