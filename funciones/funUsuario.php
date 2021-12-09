@@ -64,5 +64,4 @@ function obtenerID(){
         return $row['idUsuario'];
     }
 }
-
 ?>
