@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("funciones/funUsuario.php");
+//include("funciones/funUsuario.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -16,7 +16,7 @@ include_once("conexion.php");
 
 
    }
-   addUser('232','luz','12s@gamil','121322','123','cliente','san sebas');
+   //addUser('232','luz','12s@gamil','121322','123','cliente','san sebas');
   
 
 

@@ -1,6 +1,7 @@
 
 <?php
-//include_once("../../include/header.php");
+include_once("../../include/header.php");
+include("../../funciones/funUsuario.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -91,8 +92,9 @@ if(isset($_POST['registrar'])){
 	$correo=$_POST['correo'];
 	$celular=$_POST['celular'];
 	$pw=$_POST['pw'];
+	$tipoUsuario="cliente";
 	$direccion=$_POST['direccion'];
-	
+	addUser($dni,$nombres,$correo,$celular,$pw,$tipoUsuario,$direccion);
 
 }
 
