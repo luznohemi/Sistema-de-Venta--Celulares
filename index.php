@@ -1,5 +1,5 @@
 <?php
-include('view/cliente');
 
+header("location:view/cliente");
 
 ?>
