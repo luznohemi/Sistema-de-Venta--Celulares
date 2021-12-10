@@ -22,14 +22,16 @@ function verConfig(){
 function EditarConfig($id,$nombre,$celular,$email,$direccion){
     global $pdo;
     try {
-    $sql="UPDATE configuarcion SET DescripcionEmpresa=?,Celular=?,Gmail=?,Direccion=? WHERE IdConfig=?" ;
+    $sql="UPDATE configuracion SET DescripcionEmpresa=?,Celular=?,Gmail=?,Direccion=? WHERE IdConfig=?" ;
     $editar=$pdo->prepare($sql);
-    $editar->execute([$nombre,$celular,$email,$direccion ,$id]);
+    $editar->execute([$nombre,$celular,$email,$direccion,$id]);
 
     } catch (Exception $ex) {
          die("Error al actualizar").$ex->getMessage();
     }
-
+    
 }
+
+EditarConfig('1','MUNDO DE RES','984345676','celulares@gmail.com','Av. La cultura');
 
 ?>
