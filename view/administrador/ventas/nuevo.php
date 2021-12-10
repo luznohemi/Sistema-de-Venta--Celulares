@@ -3,7 +3,7 @@
 //include_once("../../include/header.php");
 include("includes/navbar.php");
 include("includes/header.php");
-include("../../controladores/funConfig.php");
+
 
 ?>
 <!DOCTYPE html>
@@ -17,17 +17,8 @@ include("../../controladores/funConfig.php");
 </head>
 <body>
 
-<?php
-	$datos=verConfig();
-	//vardump($datos);
 
-	foreach ($datos as $data) {
-		$id=$data['IdConfig'];
-		$Descripcion=$data['DescripcionEmpresa'];
-        $Celular=$data['Celular'];
-		$Gmail=$data['Gmail'];
-		$Direccion=$data['Direccion'];
-		?>	
+
 
 <!----  formulario de editar !-->
 <div class="container">
@@ -39,14 +30,14 @@ include("../../controladores/funConfig.php");
 	
 			<div class="card-body">
 				<form action="configuracion.php" method="POST">
-                    <input type="hidden" name="id" id="id" value="<?php echo $id?>">
+                    <input type="hidden" name="id" id="modificar_id">
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
                         <label for="">Nombres</label>
-						<input type="text" name="nombres" id="nombres" class="form-control" value="<?php echo $Descripcion?>">
+						<input type="text" name="nombres" id="nombres" class="form-control" value="">
 						
 					</div>
 
@@ -56,7 +47,7 @@ include("../../controladores/funConfig.php");
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
                         <label for="">Celular</label>
-						<input type="number" name="celular" id="celular" class="form-control" placeholder="Celular"  value="<?php echo $Celular?>">
+						<input type="number" name="celular" id="celular" class="form-control" placeholder="Celular">
 					</div>
 
 					<div class="input-group form-group">
@@ -64,7 +55,7 @@ include("../../controladores/funConfig.php");
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
                         <label for="">Correo</label>
-						<input type="email" name="correo"  id="correo"class="form-control" value="<?php echo $Gmail?>">
+						<input type="email" name="correo"  id="correo"class="form-control" placeholder="Correo">
 						
 					</div>
 
@@ -74,7 +65,7 @@ include("../../controladores/funConfig.php");
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
                         <label for="">Direccion</label>
-						<input type="text" name="direccion" id="direccion" class="form-control"  value="<?php echo $Direccion?>">
+						<input type="text" name="direccion" id="direccion" class="form-control" placeholder="Direccion">
 					</div>
 					
 					<div class="form-group">
@@ -94,21 +85,14 @@ include("../../controladores/funConfig.php");
 </div>
 <?php
 if(isset($_POST['modificar'])){
-	$id=$_POST['id'];
 	$nombres=$_POST['nombres'];
     $celular=$_POST['celular'];
 	$correo=$_POST['correo'];
 	$direccion=$_POST['direccion'];
-	EditarConfig($id,$nombres,$celular,$correo,$direccion);
+	modificarDatosE($nombres,$celular,$correo,$direccion);
 
 }
 
-?>		
-		<?php
-	}
 ?>
-
-
-
 </body>
 </html>

@@ -32,6 +32,6 @@ function EditarConfig($id,$nombre,$celular,$email,$direccion){
     
 }
 
-EditarConfig('1','MUNDO DE RES','984345676','celulares@gmail.com','Av. La cultura');
+//EditarConfig('1','MUNDO DE RES','984345676','celulares@gmail.com','Av. La cultura');
 
 ?>
