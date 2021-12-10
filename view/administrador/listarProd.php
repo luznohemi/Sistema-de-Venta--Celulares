@@ -1,9 +1,9 @@
 
 <?php
 
-//include("../../include/navbarAdmin.php");
-//include("../../include/header.php");
-include("../../../controladores/funProducto.php");
+include("includes/navbar.php");
+include("includes/header.php");
+include("../../controladores/funProducto.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
