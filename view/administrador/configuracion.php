@@ -1,6 +1,6 @@
 
 <?php
-include_once("../../include/header.php");
+//include_once("../../include/header.php");
 
 ?>
 <!DOCTYPE html>
@@ -9,69 +9,70 @@ include_once("../../include/header.php");
 	<title>configuracion</title>
    
 
-	<!--Custom styles-->
-	<link href="../../include/style/style.css" rel="stylesheet" >
+	<!--Custom styles
+	<link href="../../include/style/style.css" rel="stylesheet" >-->
 </head>
 <body>
+
+
+
+
+<!----  formulario de editar !-->
 <div class="container">
 	<div class="d-flex justify-content-center h-50">
 		<div class="card">
 			<div class="card-header  text-white" >
 				<h7>Datos de la Empresa </h7>
 			</div>
+	
 			<div class="card-body">
 				<form action="configuracion.php" method="POST">
-
+                    <input type="hidden" name="id" id="modificar_id">
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
                         <label for="">Nombres</label>
-						<input type="text" name="nombres" class="form-control" placeholder="Nombres">
+						<input type="text" name="nombres" id="nombres" class="form-control" value="">
 						
+					</div>
+
+
+                    <div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+                        <label for="">Celular</label>
+						<input type="number" name="celular" id="celular" class="form-control" placeholder="Celular">
 					</div>
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="email" name="correo" class="form-control" placeholder="Correo">
+                        <label for="">Correo</label>
+						<input type="email" name="correo"  id="correo"class="form-control" placeholder="Correo">
 						
 					</div>
 
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-						<input type="number" name="celular"  class="form-control" placeholder="Celular">
-					</div>
 
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" name="pw"class="form-control" placeholder="Contraseña">
-					</div>
-
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<input type="text" name="direccion" class="form-control" placeholder="Direccion">
+                        <label for="">Direccion</label>
+						<input type="text" name="direccion" id="direccion" class="form-control" placeholder="Direccion">
 					</div>
 					
 					<div class="form-group">
-						<input type="submit" name="registrar" value="iniciar" class="btn float-right login_btn">
+						<input type="submit" name="modificar" value="Modificar Datos" class="btn float-right login_btn">
 					</div>
 			    </div>
 
-			    <div class="card-footer">
-				 <div class="d-flex justify-content-center links">
-					¿si no tienes cuenta ?
-				</div>
+			
 				<div class="d-flex justify-content-center ">
-					<a class="text-white" href="index.php">INICIAR SESION</a>
+					<a class="text-white" href="index.php">ir a inicio</a>
 				</div>
 			</div>
 		</div>
@@ -80,15 +81,12 @@ include_once("../../include/header.php");
 	</form>
 </div>
 <?php
-if(isset($_POST['registrar'])){
-	$dni=$_POST['dni'];
+if(isset($_POST['modificar'])){
 	$nombres=$_POST['nombres'];
+    $celular=$_POST['celular'];
 	$correo=$_POST['correo'];
-	$celular=$_POST['celular'];
-	$pw=$_POST['pw'];
-	$tipoUsuario="cliente";
 	$direccion=$_POST['direccion'];
-	addUser($dni,$nombres,$correo,$celular,$pw,$tipoUsuario,$direccion);
+	modificarDatosE($nombres,$celular,$correo,$direccion);
 
 }
 
