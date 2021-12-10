@@ -1,6 +1,9 @@
 
 <?php
 //include_once("../../include/header.php");
+include("includes/navbar.php");
+include("includes/header.php");
+
 
 ?>
 <!DOCTYPE html>
