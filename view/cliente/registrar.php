@@ -68,7 +68,7 @@ include_once("../../include/header.php");
 					</div>
 					
 					<div class="form-group">
-						<input type="submit" name="registrar" value="iniciar" class="btn float-right login_btn">
+						<input type="submit" name="registrar" value="Registrar" class="btn float-right login_btn">
 					</div>
 			    </div>
 
@@ -77,7 +77,7 @@ include_once("../../include/header.php");
 					¿si no tienes cuenta ?
 				</div>
 				<div class="d-flex justify-content-center ">
-					<a class="text-white" href="index.php">INICIAR SESION</a>
+					<a class="text-white" href="login.php">INICIAR SESION</a>
 				</div>
 			</div>
 		</div>
