@@ -14,8 +14,9 @@ function verConfig(){
         }
    
 }
-verConfig();
-$data=$config;
+
+//$data=verConfig();
+//var_dump($data);
  
 
 function EditarConfig($id,$nombre,$celular,$email,$direccion){
