@@ -38,11 +38,11 @@ function login($user,$pw){
 
     if(isset($usuario)&&($contra)){
         if($tipo=='administrador'){
-            $_SESSION['usuario']=$usuario;
+            $_SESSION['IdU']=$id;
             header("location:../administrador");  
         }
         if($tipo==="cliente"){
-            $_SESSION['usuario']=$usuario;
+            $_SESSION['IdUsuario']=$id;
             header("location:index.php");
         }
            

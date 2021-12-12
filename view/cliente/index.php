@@ -16,7 +16,7 @@ $data=verProd();
                         <span><?php echo $key['Marca'];?></span><br>
                         <span><?php echo "S/.".$key['Precio'];?></span> <br>
                         <span><?php echo "Stock: ".$key['Cantidad'];?></span><br>
-                        <a href=""><Button>Comprar</Button></a>
+                        <a href="comprar.php?id=<?php echo $key['IdProducto']?>"><Button>Comprar</Button></a>
                     </div>
                   
                 <?php
