@@ -64,4 +64,19 @@ function obtenerID(){
         return $row['idUsuario'];
     }
 }
+
+
+function verUsuario(){
+    global $pdo;
+    $usuario=[];
+    $sql= "SELECT*FROM usuario";   
+    $resultado=$pdo->query($sql);
+    $resultado->setFetchMode(PDO::FETCH_ASSOC);
+
+        while ($row=$resultado->fetch()) {
+            array_push($usuario,$row);
+        }
+        return $usuario;
+}
+
 ?>
