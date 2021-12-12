@@ -15,4 +15,16 @@ function verVenta(){
         return $venta;
 }
 
+function estado($id,$estado){
+    global $pdo;
+    try {
+    $sql="UPDATE venta SET Estado=? WHERE IdVenta=?" ;
+    $editar=$pdo->prepare($sql);
+    $editar->execute([$estado,$id]);
+    header("location:../administrador/listarVenta.php");
+        
+    } catch (Exception $ex) {
+         die("Error al actualizar").$ex->getMessage();
+    }
+}
 ?>
