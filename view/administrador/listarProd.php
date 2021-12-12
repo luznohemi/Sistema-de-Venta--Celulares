@@ -41,7 +41,7 @@ include("../../controladores/funProducto.php");
         <td><?= $producto['Marca']; ?></td>
         <td><?= $producto['Precio']; ?></td>
         <td><?= $producto['Cantidad']; ?></td>
-        <td><img src="../../includes/img/<?= $producto['img']?>"></td>
+        <td><img src="../../include/img/<?= $producto['img']?>" WIDTH="100" HEIGHT="100"></td>
         <td><a href="">Eliminar</a> / <a href="">Editar</a> </td>
       </tr>
   <?php } ?>
