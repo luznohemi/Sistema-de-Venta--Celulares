@@ -36,7 +36,6 @@ include("../../controladores/funProducto.php");
    ?>
   <?php foreach ($productos as $producto){ ?>
       <tr>
-        <input type="file" name="" id="">
         <td><?= $producto['IdProducto']; ?></td>
         <td><?= $producto['Modelo']; ?></td>
         <td><?= $producto['Marca']; ?></td>
