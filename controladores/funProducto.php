@@ -3,7 +3,7 @@
 
 include_once("conexion.php");
 
-//VER PRODUCTO
+//VER PRODUCTO y mostrar catalogo
 
 $pdo;
 function verProd(){
@@ -53,7 +53,6 @@ function EditarConfig($id,$nombre,$celular,$email,$direccion){
     
 }
 
-EditarConfig('1','MUNDO DE RES','984345676','celulares@gmail.com','Av. La cultura');
 
 ?>
 

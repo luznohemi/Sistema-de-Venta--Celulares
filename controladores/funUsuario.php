@@ -74,7 +74,10 @@ function verUsuario(){
     $resultado->setFetchMode(PDO::FETCH_ASSOC);
 
         while ($row=$resultado->fetch()) {
-            array_push($usuario,$row);
+            $tipo= $row['TipoUsuario'];
+            if ($tipo=="cliente") {
+                array_push($usuario,$row);
+            }
         }
         return $usuario;
 }
