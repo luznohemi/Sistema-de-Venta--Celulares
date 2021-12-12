@@ -28,7 +28,7 @@ function nuevoProd($modelo,$descripcion,$marca,$precio,$cantidad,$img,$imgT){
     $agregar=$pdo->prepare("$sql");
     $agregar->execute([$modelo,$descripcion,$marca,$precio,$cantidad,$img]);  
      
-    $ruta="../include/img/";
+    $ruta="../../include/img/";
     $subido=$ruta.basename($img);
 
     if(move_uploaded_file($imgT,$subido)){
