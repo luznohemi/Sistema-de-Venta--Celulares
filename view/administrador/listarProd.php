@@ -15,10 +15,13 @@ include("../../controladores/funProducto.php");
     <link href="includes/style/styleT.css" rel="stylesheet" >
 </head>
 <body>
+<BR>
     <P>LISTA DE PRODUCTOS </P>
 
-    <button ><a href="nuevoProd.php">Nuevo</a> </button>
-
+  <a  class="btn btn-primary"  role="button" href="nuevoProd.php"  ><img src="http://localhost/Sistema-de-Venta--Celulares/include/iconos/nuevo-documento.png" height ="30" width="30"  />Nuevo</a>
+    
+  <br><br>
+<div class="contenedor">
 <table class="table table-bordered order-table ">
   <thead >
     <tr lass="table-info">
@@ -43,12 +46,13 @@ include("../../controladores/funProducto.php");
         <td><?= $producto['Precio']; ?></td>
         <td><?= $producto['Cantidad']; ?></td>
         <td><img src="../../include/img/<?= $producto['img']?>" WIDTH="100" HEIGHT="100"></td>
-        <td><a href="">Eliminar</a> / <a href="">Editar</a> </td>
+        <td><a class="btn "role="button"href="nuevoProd.php"><img src="http://localhost/Sistema-de-Venta--Celulares/include/iconos/editar.png" height="30" width="30"/></a>/<a  class="btn"role="button"href="nuevoProd.php"><img src="http://localhost/Sistema-de-Venta--Celulares/include/iconos/eliminar.png" height ="30" width="30"/></td>
       </tr>
   <?php } ?>
 
   
 
 </table>
+</div>
 </body>
 </html>

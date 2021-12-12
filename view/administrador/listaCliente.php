@@ -14,9 +14,8 @@ include("../../controladores/funUsuario.php");
     <link href="includes/style/styleT.css" rel="stylesheet" >
 </head>
 <body>
+  <BR>
     <P>LISTA DE CLIENTE </P>
-
-    <button ><a href="nuevoProd.php">Nuevo</a> </button>
 
 <table class="table table-bordered order-table ">
   <thead>

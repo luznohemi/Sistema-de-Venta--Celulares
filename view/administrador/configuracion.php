@@ -39,19 +39,12 @@ include("../../controladores/funConfig.php");
 				<form action="configuracion.php" method="POST">
                     <input type="hidden" name="id" id="id" value="<?php echo $id?>">
 
-						
                         <label for="">Nombres</label>
 						<input type="text" name="nombres" id="nombres" class="form-control" value="<?php echo $Descripcion?>">
 						
-				
-
-
 						
                         <label for="">Celular</label>
 						<input type="number" name="celular" id="celular" class="form-control" placeholder="Celular"  value="<?php echo $Celular?>">
-				
-
-
 						
                         <label for="">Correo</label>
 						<input type="email" name="correo"  id="correo"class="form-control" value="<?php echo $Gmail?>">
