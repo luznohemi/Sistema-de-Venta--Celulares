@@ -16,16 +16,18 @@ include("../../controladores/funProducto.php");
 <body>
     <P>LISTA DE PRODUCTOS </P>
 
+    <button ><a href="nuevoProd.php">Nuevo</a> </button>
+
 <table class="table table-bordered order-table ">
   <thead>
     <tr>
       <th>ID</th>
       <th>MODELOS</th>
-      <th>DESCRIPCION</th>
       <th>MARCA</th>
       <th>PRECIO</th>
       <th>CANTIDAD</th>
       <th>IMAGEN</th>
+      <th>RECURSOS</th>
     </tr>
   </thead>
 
@@ -39,9 +41,11 @@ include("../../controladores/funProducto.php");
         <td><?= $producto['Marca']; ?></td>
         <td><?= $producto['Precio']; ?></td>
         <td><?= $producto['Cantidad']; ?></td>
-        <td><?= $producto['img']; ?></td>
+        <td><img src="../../includes/img/<?= $producto['img']?>"></td>
+        <td><a href="">Eliminar</a> / <a href="">Editar</a> </td>
       </tr>
   <?php } ?>
+
   
 
 </table>

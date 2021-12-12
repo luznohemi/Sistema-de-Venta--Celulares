@@ -25,7 +25,7 @@ include("includes/header.php");
 	<div class="d-flex justify-content-center h-50">
 		<div class="card">
 			<div class="card-header  text-white" >
-				<h7>Datos de la Empresa </h7>
+				<h7>nueva venta </h7>
 			</div>
 	
 			<div class="card-body">

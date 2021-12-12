@@ -3,6 +3,7 @@
 
 include_once("conexion.php");
 
+//VER PRODUCTO
 
 $pdo;
 function verProd(){
@@ -14,16 +15,14 @@ function verProd(){
 
         while ($row=$resultado->fetch()) {
             array_push($producto,$row);
-            return $producto;
         }
-   
+        return $producto;
 }
 
 //$data=verProd();
-//var_dump($data);
- 
+//print_r($data);
    //registrar usuario
-function nuevoProd($modelo,$descripcion,$marca,$precio,$cantidad,$img){
+function nuevoProd($modelo,$descripcion,$marca,$precio,$cantidad,$img,$imgT){
     global $pdo;
     $sql="INSERT INTO producto(Modelo,Descripcion,Marca,Precio,Cantidad,img) VALUES(?,?,?,?,?,?)";
     $agregar=$pdo->prepare("$sql");
