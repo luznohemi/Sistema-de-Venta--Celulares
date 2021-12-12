@@ -20,10 +20,12 @@ include("../../controladores/funAdmin.php");
   <thead>
   <tr >
       <th>ID</th>
+      <th>Cliente</th>
       <th>FECHA</th>
       <th>CANTIDAD</th>
       <th>TOTAL</th>
       <th>ESTADO</th>
+      <th>Acciones</th>
      
     
     </tr>
@@ -35,6 +37,7 @@ include("../../controladores/funAdmin.php");
   <?php foreach ($usuario as $usuarios){ ?>
     <tr class="table-info">
         <td><?= $usuarios['IdVenta']; ?></td>
+        <td><a href="listaCliente"><?= $usuarios['iduser']; ?></a></td>
         <td><?= $usuarios['fecha']; ?></td>
         <td><?= $usuarios['Cantidad']; ?></td>
         <td><?= $usuarios['Total']; ?></td>
