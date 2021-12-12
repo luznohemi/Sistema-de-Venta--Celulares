@@ -18,7 +18,7 @@ $data=verProd();
         <?php
             foreach ($data as $key) {
                 ?>
-                    <div class="contenido" >
+                    <div class="contenido"   >
                         <img src="../../include/img/<?= $key['img']?>" WIDTH="100" HEIGHT="100"></td>
                         <h4><?php echo $key['Modelo'];?></h4>
                         <span><?php echo $key['Marca'];?></span><br>
