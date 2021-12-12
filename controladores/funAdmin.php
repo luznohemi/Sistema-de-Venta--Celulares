@@ -14,4 +14,5 @@ function verVenta(){
         }
         return $venta;
 }
+
 ?>

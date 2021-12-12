@@ -82,4 +82,28 @@ function verUsuario(){
         return $usuario;
 }
 
+function comprar($fecha,$cantidad,$total,$iduser,$idprod){
+    global $pdo;
+    $estado="Pendiente";
+       try {
+           $agregar=$pdo->prepare("INSERT INTO venta(fecha,Cantidad,Total,Estado,iduser,idprod) VALUES(?,?,?,?,?,?)");
+           $agregar->execute([$fecha,$cantidad,$total,$estado,$iduser,$idprod]);  
+           echo "Se registro su pedido";
+           ?>
+            <a href="../cliente/">Regresar</a>
+           <?php
+           ?>
+            <script>
+                window.open('https://wa.link/cm6onl','_blank');                                                                                                                            
+                
+            </script>
+           <?php
+       } catch (Exception $ex) {
+           die("Error").$ex->getMessage();
+       }
+}
+
+function notWhatsapp(){
+    header("location:https://wa.link/cm6onl");
+}
 ?>

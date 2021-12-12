@@ -36,7 +36,7 @@ include("../../controladores/funAdmin.php");
     <tr class="table-info">
         <td><?= $usuarios['IdVenta']; ?></td>
         <td><?= $usuarios['fecha']; ?></td>
-        <td><?= $usuarios['Cantida']; ?></td>
+        <td><?= $usuarios['Cantidad']; ?></td>
         <td><?= $usuarios['Total']; ?></td>
         <td><?= $usuarios['Estado']; ?></td>
    
