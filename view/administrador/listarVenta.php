@@ -2,7 +2,7 @@
 
 include("includes/navbar.php");
 include("includes/header.php");
-//include("../../controladores/funProducto.php");
+include("../../controladores/funAdmin.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +41,6 @@ include("includes/header.php");
         <td><?= $usuarios['Total']; ?></td>
         <td><?= $usuarios['Estado']; ?></td>
    
-       
        
         <td><a href="">Eliminar</a> / <a href="">Editar</a> </td>
       </tr>
