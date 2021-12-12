@@ -1,0 +1,22 @@
+body{
+    background-color:yellow;
+}
+
+
+
+
+div{
+    border-radius: 5px;
+}
+.contenedor{
+    background-color:rgba(0, 124, 133, 0.822);
+    width:100%;
+    height:100%;
+}
+.contenido{
+    background-color:turquoise;
+    height:5px;
+    width:5px;
+    float:left;
+    margin: 220px;
+}

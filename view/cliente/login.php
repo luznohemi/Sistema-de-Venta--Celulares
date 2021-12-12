@@ -14,10 +14,10 @@ include_once("../../include/header.php");
 </head>
 <body>
 <div class="container">
-	<div class="d-flex justify-content-center h-50">
+	<div class="d-flex justify-content-center ">
 		<div class="card">
 			<div class="card-header  text-white" >
-				<h7>BIENVENIDO A NUESTRO SISTEMA </h7>
+				<h6>BIENVENIDO A  NUESTRO  SISTEMA  </h6>
 			</div>
 			<div class="card-body">
 				

@@ -1,3 +1,11 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de productos</title>
+    <link href="includes/style/styleCat.css" rel="stylesheet" >
+</head>
 <?php
 include("includes/navbar.php");
 include("includes/header.php");
@@ -6,11 +14,11 @@ include("../../controladores/funProducto.php");
 $data=verProd();
 ?>
 <body>
-    <div class="container">
+<div class="contenedor">
         <?php
             foreach ($data as $key) {
                 ?>
-                    <div class="tarjet">
+                    <div class="contenido" >
                         <img src="../../include/img/<?= $key['img']?>" WIDTH="100" HEIGHT="100"></td>
                         <h4><?php echo $key['Modelo'];?></h4>
                         <span><?php echo $key['Marca'];?></span><br>
@@ -24,3 +32,4 @@ $data=verProd();
         ?>
     </div>
 </body>
+

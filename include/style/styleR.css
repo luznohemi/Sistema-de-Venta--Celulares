@@ -4,8 +4,7 @@ html,body{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    font-family: 'Numans', sans-serif; 
-   
+    font-family: 'Numans', sans-serif;
     }
     
     .container{
@@ -14,10 +13,9 @@ html,body{
     }
     
     .card{
-    margin: 70px;
-    margin: 120px;
-    height: 350px;
-  
+   
+    margin: 80px;
+    height: 520px;
     margin-bottom: auto;
     width: 300px;
     background-color: rgba(0, 0, 0, 0.788) !important;
