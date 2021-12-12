@@ -11,15 +11,16 @@ include("../../controladores/funAdmin.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de usuario$usuario</title>
+    <link href="includes/style/styleT.css" rel="stylesheet" >
 </head>
 <body>
-    <P>LISTA DE usuario$usuario </P>
+    <P>LISTA DE VENTAS</P>
 
     <button ><a href="nuevoProd.php">Nuevo</a> </button>
 
 <table class="table table-bordered order-table ">
   <thead>
-    <tr>
+  <tr >
       <th>ID</th>
       <th>FECHA</th>
       <th>CANTIDAD</th>
@@ -34,7 +35,7 @@ include("../../controladores/funAdmin.php");
   $usuario=verVenta();
    ?>
   <?php foreach ($usuario as $usuarios){ ?>
-      <tr>
+    <tr class="table-info">
         <td><?= $usuarios['IdVenta']; ?></td>
         <td><?= $usuarios['fecha']; ?></td>
         <td><?= $usuarios['Cantida']; ?></td>

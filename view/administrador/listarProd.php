@@ -12,6 +12,7 @@ include("../../controladores/funProducto.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de productos</title>
+    <link href="includes/style/styleT.css" rel="stylesheet" >
 </head>
 <body>
     <P>LISTA DE PRODUCTOS </P>
@@ -19,8 +20,8 @@ include("../../controladores/funProducto.php");
     <button ><a href="nuevoProd.php">Nuevo</a> </button>
 
 <table class="table table-bordered order-table ">
-  <thead>
-    <tr>
+  <thead >
+    <tr lass="table-info">
       <th>ID</th>
       <th>MODELOS</th>
       <th>MARCA</th>
@@ -35,7 +36,7 @@ include("../../controladores/funProducto.php");
   $productos=verProd();
    ?>
   <?php foreach ($productos as $producto){ ?>
-      <tr>
+      <tr class="table-info" >
         <td><?= $producto['IdProducto']; ?></td>
         <td><?= $producto['Modelo']; ?></td>
         <td><?= $producto['Marca']; ?></td>
