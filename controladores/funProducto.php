@@ -53,6 +53,20 @@ function EditarConfig($id,$nombre,$celular,$email,$direccion){
     
 }
 
+function recupProd($id){
+    global $pdo;
+    $sql="SELECT*FROM producto WHERE IdProducto=$id";
+    $producto=[];
+    $resultado=$pdo->query($sql);
+    $resultado->setFetchMode(PDO::FETCH_ASSOC);
+
+        while ($row=$resultado->fetch()) {
+           array_push($producto,$row);
+        }
+        //var_dump($producto);
+        return $producto;
+    
+}
 
 ?>
 
