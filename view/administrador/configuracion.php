@@ -11,9 +11,7 @@ include("../../controladores/funConfig.php");
 <head>
 	<title>configuracion</title>
    
-
-	<!--Custom styles
-	<link href="../../include/style/style.css" rel="stylesheet" >-->
+	<link href="includes/style/style1.css" rel="stylesheet" >
 </head>
 <body>
 
@@ -34,58 +32,40 @@ include("../../controladores/funConfig.php");
 	<div class="d-flex justify-content-center h-50">
 		<div class="card">
 			<div class="card-header  text-white" >
-				<h7>Datos de la Empresa </h7>
+				<h7>DATOS DE LA EMPRESA</h7>
 			</div>
 	
 			<div class="card-body">
 				<form action="configuracion.php" method="POST">
                     <input type="hidden" name="id" id="id" value="<?php echo $id?>">
 
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
+						
                         <label for="">Nombres</label>
 						<input type="text" name="nombres" id="nombres" class="form-control" value="<?php echo $Descripcion?>">
 						
-					</div>
+				
 
 
-                    <div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
+						
                         <label for="">Celular</label>
 						<input type="number" name="celular" id="celular" class="form-control" placeholder="Celular"  value="<?php echo $Celular?>">
-					</div>
+				
 
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
+
+						
                         <label for="">Correo</label>
 						<input type="email" name="correo"  id="correo"class="form-control" value="<?php echo $Gmail?>">
 						
-					</div>
-
-
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
+				
                         <label for="">Direccion</label>
 						<input type="text" name="direccion" id="direccion" class="form-control"  value="<?php echo $Direccion?>">
-					</div>
+					
 					
 					<div class="form-group">
-						<input type="submit" name="modificar" value="Modificar Datos" class="btn float-right login_btn">
+						<input type="submit" name="modificar" value="Modificar " class="btn float-right login_btn">
 					</div>
 			    </div>
-
-			
-				<div class="d-flex justify-content-center ">
-					<a class="text-white" href="index.php">ir a inicio</a>
-				</div>
+				
 			</div>
 		</div>
 	</div>
