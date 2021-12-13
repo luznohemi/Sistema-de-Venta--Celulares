@@ -27,7 +27,7 @@ include("../../controladores/funUsuario.php");
       <th>CELULAR</th>
       <th>TUsuario</th>
       <th>DIRRECCION</th>
-      <th> </th>
+    
     </tr>
   </thead>
 
@@ -43,8 +43,7 @@ include("../../controladores/funUsuario.php");
         <td><?= $usuarios['Celular']; ?></td>
         <td><?= $usuarios['TipoUsuario']; ?></td>
         <td><?= $usuarios['Direccion']; ?></td>
-       
-        <td><a href="">Eliminar</a> / <a href="">Editar</a> </td>
+      
       </tr>
   <?php } ?>
 

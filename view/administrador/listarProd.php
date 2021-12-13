@@ -37,8 +37,10 @@ include("../../controladores/funProducto.php");
 
   <?php  
   $productos=verProd();
+
    ?>
   <?php foreach ($productos as $producto){ ?>
+
       <tr class="table-info" >
         <td><?= $producto['IdProducto']; ?></td>
         <td><?= $producto['Modelo']; ?></td>
@@ -46,12 +48,10 @@ include("../../controladores/funProducto.php");
         <td><?= $producto['Precio']; ?></td>
         <td><?= $producto['Cantidad']; ?></td>
         <td><img src="../../include/img/<?= $producto['img']?>" WIDTH="100" HEIGHT="100"></td>
-        <td><a class="btn "role="button"href="nuevoProd.php"><img src="http://localhost/Sistema-de-Venta--Celulares/include/iconos/editar.png" height="30" width="30"/></a>/<a  class="btn"role="button"href="nuevoProd.php"><img src="http://localhost/Sistema-de-Venta--Celulares/include/iconos/eliminar.png" height ="30" width="30"/></td>
+        <td><a  class="btn "role="button"><img src="http://localhost/Sistema-de-Venta--Celulares/include/iconos/editar.png" height="30" width="30"/></a>/<a href="eliminarProd.php?id=<? echo $producto['idProducto']?>"  class="btn"role="button"><img src="http://localhost/Sistema-de-Venta--Celulares/include/iconos/eliminar.png" height ="30" width="30"/></td>
       </tr>
-  <?php } ?>
-
-  
-
+      
+<?php } ?>
 </table>
 </div>
 </body>

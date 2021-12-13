@@ -1,5 +1,6 @@
 
 <?php
+session_start();
 include("includes/navbar.php");
 include("includes/header.php");
 include("../../controladores/funProducto.php");

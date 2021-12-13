@@ -68,6 +68,19 @@ function recupProd($id){
     
 }
 
+    //eliminar producto
+    function eliminar($id){
+        global $pdo;
+        try {
+            $sql="DELETE FROM producto WHERE IdProducto=?";
+            $resultado=$pdo->prepare($sql);
+            $resultado->execute([$id]);
+           
+        } catch (Exception $ex) {
+            die("ERROR").$ex->getMessage();
+        }
+    }
+
 ?>
 
 
