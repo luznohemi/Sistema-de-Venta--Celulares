@@ -42,7 +42,6 @@ include("../../controladores/funProducto.php");
 			</div>
 		</div>
 	</div>
-
    </form>
 </div>
 <?php
