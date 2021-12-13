@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("../../controladores/funUsuario.php");
 ?>
 <!DOCTYPE html>

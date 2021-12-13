@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../../controladores/funAdmin.php");
     if (isset($_POST['Actualizar'])) {
         $estado=$_POST['activo'];

@@ -1,3 +1,6 @@
+<?php
+  require_once("../../controladores/funUsuario.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,9 +33,19 @@
         </li>
        
       </ul>
-      <form class="d-flex">
-        <button class="btn btn-outline-success" type="submit">DUDA</button>
-      </form>
     </div>
+  </div> 
+
+  <div class="user">
+    <img src="../../include/iconos/usuario.png" witch="40px" height="40px"><br>
+    <label>Cliente</label>
+    <form action="#" method="post">
+      <input type="submit" value="Cerrar Session" name="salir">
+    </form>
+    <?php
+      if (isset($_POST['salir'])) {
+        cerrarSession();
+      }
+    ?>
   </div>
 </nav>

@@ -13,8 +13,6 @@ include_once("conexion.php");
        } catch (Exception $ex) {
            die("Error").$ex->getMessage();
        }
-
-
    }
    //addUser('232','luz','12s@gamil','121322','123','cliente','san sebas');
   
@@ -37,7 +35,7 @@ function login($user,$pw){
 
 
     if(isset($usuario)&&($contra)){
-        if($tipo=='administrador'){
+        if($tipo==='administrador'){
             $_SESSION['IdUsuario']=$id;
             header("location:../administrador");  
         }
@@ -54,6 +52,7 @@ function login($user,$pw){
 function cerrarSession(){
     session_unset();
     session_destroy();
+    header("location:../../");
 }
 
 function obtenerID(){
@@ -106,7 +105,4 @@ function comprar($fecha,$cantidad,$total,$iduser,$idprod){
        }
 }
 
-function notWhatsapp(){
-    header("location:https://wa.link/cm6onl");
-}
 ?>
