@@ -38,7 +38,7 @@ function login($user,$pw){
 
     if(isset($usuario)&&($contra)){
         if($tipo=='administrador'){
-            $_SESSION['IdU']=$id;
+            $_SESSION['IdUsuario']=$id;
             header("location:../administrador");  
         }
         if($tipo==="cliente"){
@@ -51,7 +51,10 @@ function login($user,$pw){
     }    
 }
 
-
+function cerrarSession(){
+    session_unset();
+    session_destroy();
+}
 
 function obtenerID(){
     global $pdo;
