@@ -1,6 +1,5 @@
 <?php
-session_start();
-echo $_SESSION['IdUsuario']; 
+session_start(); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
