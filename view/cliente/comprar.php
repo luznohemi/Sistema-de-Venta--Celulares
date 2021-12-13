@@ -1,9 +1,10 @@
-
 <?php
+session_start();
+echo $_SESSION['IdUsuario']; 
 include("includes/navbar.php");
 include("includes/header.php");
 include("../../controladores/funProducto.php");
-include("../../controladores/funUsuario.php");
+require_once("../../controladores/funUsuario.php");
 
 ?>
 <!DOCTYPE html>

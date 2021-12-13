@@ -1,4 +1,7 @@
-
+<?php
+session_start();
+echo $_SESSION['IdUsuario']; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +12,7 @@
 <?php
 include("includes/navbar.php");
 include("includes/header.php");
-include("../../controladores/funProducto.php");
+require_once("../../controladores/funProducto.php");
 
 $data=verProd();
 ?>

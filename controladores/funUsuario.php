@@ -35,7 +35,7 @@ function login($user,$pw){
 
 
     if(isset($usuario)&&($contra)){
-        if($tipo=='administrador'){
+        if($tipo==='administrador'){
             $_SESSION['IdUsuario']=$id;
             header("location:../administrador");  
         }

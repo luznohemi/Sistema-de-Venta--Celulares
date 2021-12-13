@@ -1,5 +1,5 @@
 <?php
-  include("../../controladores/funUsuario.php");
+  require_once("../../controladores/funUsuario.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
