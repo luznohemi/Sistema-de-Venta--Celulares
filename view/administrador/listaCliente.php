@@ -11,11 +11,10 @@ require_once("../../controladores/funUsuario.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de cliente</title>
-    <link href="includes/style/styleT.css" rel="stylesheet" >
 </head>
 <body>
   <BR>
-    <P>LISTA DE CLIENTE </P>
+    <p>LISTA DE CLIENTE </p>
 
 <table class="table table-bordered order-table ">
   <thead>

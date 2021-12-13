@@ -10,12 +10,12 @@ include("../../controladores/funAdmin.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de usuario$usuario</title>
-    <link href="includes/style/styleT.css" rel="stylesheet" >
+    <title>Lista de Ventas</title>
+
 </head>
 <body>
   <BR>
-    <P>LISTA DE VENTAS</P>
+    <p>LISTA DE PEDIDO</p>
 <table class="table table-bordered order-table ">
   <thead>
   <tr >

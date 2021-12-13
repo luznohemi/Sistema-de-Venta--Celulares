@@ -1,5 +1,6 @@
 <?php
 include_once("conexion.php");
+//ver configuracion
 
 function verConfig(){
     global $pdo;
@@ -18,7 +19,7 @@ function verConfig(){
 //$data=verConfig();
 //var_dump($data);
  
-
+//editar configuaracion 
 function EditarConfig($id,$nombre,$celular,$email,$direccion){
     global $pdo;
     try {

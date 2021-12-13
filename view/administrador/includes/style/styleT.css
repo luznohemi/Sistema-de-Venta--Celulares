@@ -1,6 +1,4 @@
 
-
-
 html,body{
     background-image: url('https://cdn.pixabay.com/photo/2018/03/04/21/43/background-3199325_960_720.jpg');
     background-size: cover;
@@ -15,7 +13,7 @@ html,body{
 }
 
 
-p{
+h3{
     color: rgb(154, 210, 214);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     zoom: 2;

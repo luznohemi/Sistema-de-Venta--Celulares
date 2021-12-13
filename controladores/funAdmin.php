@@ -2,6 +2,8 @@
 
 include_once("conexion.php");
 
+//funcion ver venta 
+
 function verVenta(){
     global $pdo;
     $venta=[];
@@ -14,7 +16,7 @@ function verVenta(){
         }
         return $venta;
 }
-
+ //funcion de estado 
 function estado($id,$estado){
     global $pdo;
     try {

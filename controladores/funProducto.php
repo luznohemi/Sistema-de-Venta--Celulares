@@ -40,6 +40,7 @@ function nuevoProd($modelo,$descripcion,$marca,$precio,$cantidad,$img,$imgT){
 }
  // nuevoProd('j2 prime','samsung j2','samsung','1200','4','cliente');
 
+ //editar configuracion 
 function EditarConfig($id,$nombre,$celular,$email,$direccion){
     global $pdo;
     try {
@@ -80,7 +81,7 @@ function recupProd($id){
             die("ERROR").$ex->getMessage();
         }
     }
-
+    //eliminar('3');
 ?>
 
 

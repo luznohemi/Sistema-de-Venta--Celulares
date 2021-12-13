@@ -12,11 +12,10 @@ include("../../controladores/funProducto.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de productos</title>
-    <link href="includes/style/styleT.css" rel="stylesheet" >
 </head>
 <body>
 <BR>
-    <P>LISTA DE PRODUCTOS </P>
+    <p>LISTA DE PRODUCTOS </p>
 
   <a  class="btn btn-primary"  role="button" href="nuevoProd.php"  ><img src="http://localhost/Sistema-de-Venta--Celulares/include/iconos/nuevo-documento.png" height ="30" width="30"  />Nuevo</a>
     
@@ -48,7 +47,7 @@ include("../../controladores/funProducto.php");
         <td><?= $producto['Precio']; ?></td>
         <td><?= $producto['Cantidad']; ?></td>
         <td><img src="../../include/img/<?= $producto['img']?>" WIDTH="100" HEIGHT="100"></td>
-        <td><a  class="btn "role="button"><img src="http://localhost/Sistema-de-Venta--Celulares/include/iconos/editar.png" height="30" width="30"/></a>/<a href="eliminarProd.php?id=<? echo $producto['idProducto']?>"  class="btn"role="button"><img src="http://localhost/Sistema-de-Venta--Celulares/include/iconos/eliminar.png" height ="30" width="30"/></td>
+        <td><a href="eliminarProd.php?id=<?php echo $producto['IdProducto']?>">Eliminar</a></td>
       </tr>
       
 <?php } ?>
