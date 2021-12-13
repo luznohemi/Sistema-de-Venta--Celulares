@@ -1,11 +1,4 @@
-<?php
-    session_start();
-    if (isset($_SESSION['IdUsuario'])) {
-        //echo $_SESSION['IdUsuario'];
-    }else {
-        //header("location:../");
-    }
-?>
+                                                                                                        
 <!DOCTYPE html>
 <html lang="en">
 <head>
