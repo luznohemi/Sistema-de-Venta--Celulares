@@ -1,0 +1,48 @@
+html,body{
+    background-image: url('https://familiavance.com/wp-content/uploads/2020/09/FONDO-10.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+    }
+    
+    .container{
+    margin: 70px;
+    height: 100%;
+    align-content: center;
+    }
+    
+    .card{
+    height: 430px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 350px;
+    background-color: rgba(140, 203, 240, 0.596) !important;
+    }
+    
+    
+    .login_btn{
+  
+    color: rgb(218, 236, 234);
+    background-color:   hsl(207, 70%, 40%);
+    width: 100px;
+    height:  40px;
+    }
+    
+    .login_btn:hover{
+    color: black;
+    background-color: rgb(150, 204, 211);
+    }
+    
+   input{
+   margin: 4px; 
+  
+   }
+   label{
+       margin: 4px;
+   }
+
+ 
+  
+
+    
