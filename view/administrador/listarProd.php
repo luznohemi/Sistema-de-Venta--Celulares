@@ -31,7 +31,7 @@ include("../../controladores/funProducto.php");
       <th>PRECIO</th>
       <th>CANTIDAD</th>
       <th>IMAGEN</th>
-      <th>RECURSOS</th>
+      <th>ACCION</th>
     </tr>
   </thead>
 

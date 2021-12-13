@@ -1,7 +1,10 @@
+
 <?php
+include("includes/navbar.php");
 include("includes/header.php");
 include("../../controladores/funProducto.php");
 include("../../controladores/funUsuario.php");
+
 $id=$_GET['id'];
 $data=recupProd($id);
 $idUsuario= $_SESSION['IdUsuario'];
